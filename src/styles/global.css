@@ -1,0 +1,166 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply font-openSans antialiased text-text-default bg-bg-default;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply m-0 font-bold;
+  }
+
+  h1,
+  .h1 {
+    @apply text-[32px] leading-90 md:text-5xl;
+  }
+
+  h2,
+  .h2 {
+    @apply md:text-[40px] leading-90 text-[28px];
+  }
+
+  h3,
+  .h3 {
+    @apply md:text-[32px] text-2xl;
+  }
+
+  h4,
+  .h4 {
+    @apply text-2xl;
+  }
+
+  h5,
+  .h5 {
+    @apply text-xl font-semibold;
+  }
+
+  .subheading {
+    @apply md:text-xl md:font-semibold leading-120 text-lg font-normal;
+  }
+
+  .paragraph-l-semibold {
+    @apply text-lg font-semibold;
+  }
+
+  .paragraph-m-bold {
+    @apply font-bold leading-none;
+  }
+
+  .paragraph-m-semibold {
+    @apply font-semibold leading-[22px];
+  }
+
+  .paragraph-m-medium {
+    @apply font-medium leading-150;
+  }
+
+  .paragraph-s-semibold {
+    @apply text-sm font-semibold;
+  }
+
+  .paragraph-s-medium {
+    @apply text-sm font-semibold leading-[19px];
+  }
+
+  .paragraph-xs-bold {
+    @apply text-xs font-bold;
+  }
+
+  .paragraph-xs-regular {
+    @apply text-xs;
+  }
+
+  input[type='number']::-webkit-outer-spin-button,
+  input[type='number']::-webkit-inner-spin-button,
+  input[type='number'] {
+    -webkit-appearance: none;
+    margin: 0;
+    -moz-appearance: textfield !important;
+  }
+}
+
+@layer components {
+  .container {
+    @apply mx-auto max-w-[1248px] w-full md:px-6 px-5;
+  }
+
+  .h-scrollbar::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  .h-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .h-scrollbar::-webkit-scrollbar-thumb {
+    background: #e6e7e8;
+    border-radius: 2px;
+  }
+
+  input.input:-webkit-autofill {
+    -webkit-text-fill-color: #fff !important;
+    background-color: transparent !important;
+    transition: background-color 5000s ease-in-out 0s;
+    box-shadow: none !important;
+    padding-bottom: 12px;
+    padding-top: 40px;
+  }
+
+  input.input:-webkit-autofill ~ label {
+    transition: none;
+    top: 20px;
+  }
+}
+
+/* Soner mobile offset */
+
+[data-sonner-toaster] {
+  --mobile-offset: 8px !important;
+}
+
+.CollapsibleContent {
+  overflow: hidden;
+}
+.CollapsibleContent[data-state='open'] {
+  animation: slideDown 300ms ease-out;
+}
+.CollapsibleContent[data-state='closed'] {
+  animation: slideUp 300ms ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    height: 0;
+  }
+  to {
+    height: var(--radix-collapsible-content-height);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    height: var(--radix-collapsible-content-height);
+  }
+  to {
+    height: 0;
+  }
+}
+
+.glass-button {
+  @apply p-5 text-white rounded-md backdrop-blur-md shadow-lg text-2xl transition duration-500 relative overflow-hidden bg-white/25;
+}
+.glass-button::after {
+  @apply absolute top-0 bottom-0 left-0 h-32 w-80 bg-gradient-to-r from-transparent via-white/20 to-transparent transition-transform duration-1000;
+  content: '';
+  transform: skewX(-45deg) translateX(-200%);
+}
+.glass-button:hover::after {
+  transform: skewX(-45deg) translateX(200%);
+}
