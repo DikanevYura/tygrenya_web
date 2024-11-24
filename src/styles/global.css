@@ -154,7 +154,7 @@
 }
 
 .glass-button {
-  @apply p-5 text-white rounded-md backdrop-blur-md shadow-lg text-2xl transition duration-500 relative overflow-hidden bg-white/25;
+  @apply flex items-center justify-center size-[48px] text-white rounded-md backdrop-blur-md shadow-lg text-2xl transition duration-500 relative overflow-hidden bg-white/25;
 }
 .glass-button::after {
   @apply absolute top-0 bottom-0 left-0 h-32 w-80 bg-gradient-to-r from-transparent via-white/20 to-transparent transition-transform duration-1000;

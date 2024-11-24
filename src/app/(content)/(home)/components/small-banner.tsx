@@ -56,7 +56,7 @@ const BannerGrid: React.FC<BannerProps> = ({ data }) => {
                 )}
               >
                 <Image
-                  src="/assets/images/tugrenya-big-banner.png"
+                  src={item.image}
                   alt={item.value}
                   sizes="(min-width: 1880px) 382px, (min-width: 1540px) calc(14.69vw + 109px), (min-width: 1280px) calc(25vw - 26px), (min-width: 780px) calc(32.29vw - 19px), calc(100vw - 32px)"
                   className={cn(

@@ -12,8 +12,7 @@ import { cn } from '@/libs/cn';
 export async function generateMetadata() {
   return {
     title: {
-      template: `%s | 'meta.title'`,
-      default: 'meta.title',
+      default: 'Тигреня',
     },
     icons: [
       {

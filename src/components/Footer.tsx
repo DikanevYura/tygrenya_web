@@ -1,34 +1,44 @@
 'use client';
 
-import Image from 'next/image';
 import Link from 'next/link';
 
+import { Icon } from './Sprite';
+
 const Footer = () => {
+  const currentYear = new Date().getFullYear();
+
   return (
-    <footer className="bg-text-tugrenya-black py-16 md:py-20">
+    <footer className="bg-text-tugrenya-black pb-2 pt-16 md:pt-20">
       <div className="container flex flex-col gap-10 md:gap-0">
         <div className="flex flex-col items-center justify-center gap-10 md:flex-row md:gap-2 md:border-t md:pt-4 lg:gap-10">
-          <Link href="/" className="shrink-0 md:w-[215px]">
-            <Image src="/assets/images/Colorful Toy Rental Business Card.svg" alt="logo" width={0} height={0} className="size-full object-cover" />
-          </Link>
           <nav>
-            <ul className="flex flex-col  gap-4 md:flex-row  md:gap-[60px]">
+            <ul className="flex flex-col gap-4 md:flex-row md:gap-[60px]">
               <div className="flex space-x-4">
-                <button className="glass-button"><i className="fab fa-instagram"></i></button>
-                <button className="glass-button"><i className="fab fa-twitter"></i></button>
-                <button className="glass-button"><i className="fab fa-whatsapp"></i></button>
-                <button className="glass-button"><i className="fab fa-facebook"></i></button>
+                <Link href="https://www.instagram.com/psychologist_oleksandra/" className="glass-button">
+                  <i className="fab fa-instagram">
+                    <Icon name="instagram-svgrepo-com" size={32} />
+                  </i>
+                </Link>
+                <Link href="https://t.me/oleksandraa_aa" className="glass-button">
+                  <i className="fab fa-twitter">
+                    <Icon name="telegram-svgrepo-com" size={24} />
+                  </i>
+                </Link>
+                {/* <Link href="/" className="glass-button"><i className="fab fa-whatsapp"></i></Link>
+                <Link className="glass-button"><i className="fab fa-facebook"></i></Link> */}
               </div>
             </ul>
           </nav>
         </div>
         <div className="flex justify-center md:mt-8">
-          <span className="text-text-muted">2024</span>
+          <span className="text-text-muted">
+            {currentYear}
+            {' '}
+            Всі права захищені. Тигреня
+          </span>
         </div>
       </div>
-
     </footer>
-
   );
 };
 

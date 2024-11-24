@@ -57,10 +57,16 @@ const Header = () => {
   const scrollToSection = (id: string) => {
     const section = document.getElementById(id);
     if (section) {
-      section.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      setIsOpenMenu(false);
-      unlock();
+      const yOffset = -100;
+      const yPosition = section.getBoundingClientRect().top + window.scrollY + yOffset;
+
+      window.scrollTo({
+        top: yPosition,
+        behavior: 'smooth',
+      });
     }
+    setIsOpenMenu(false);
+    unlock();
   };
 
   useEffect(() => {

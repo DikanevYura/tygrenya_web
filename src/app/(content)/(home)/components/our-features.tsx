@@ -76,7 +76,7 @@ export const Lessons: FC<{
               >
                 <div className="flex flex-col items-center">
                   <Image
-                    className="aspect-[1.276/1] w-[319px]"
+                    className="aspect-[1.276/1] w-[319px] object-cover"
                     src={slide.image}
                     alt={`slide-${slide.id}`}
                     width={896}
