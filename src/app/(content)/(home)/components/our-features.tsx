@@ -74,9 +74,9 @@ export const Lessons: FC<{
                 key={`Lessons_${slide.id}`}
                 className="max-w-[319px]"
               >
-                <div className="flex flex-col items-center">
+                <div className="flex flex-col items-center rounded-md">
                   <Image
-                    className="aspect-[1.276/1] w-[319px] object-cover"
+                    className="aspect-[1.276/1] w-[319px] rounded-md object-cover"
                     src={slide.image}
                     alt={`slide-${slide.id}`}
                     width={896}

@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import Link from 'next/link';
 
 import { Icon } from './Sprite';
@@ -11,6 +12,9 @@ const Footer = () => {
     <footer className="bg-text-tugrenya-black pb-2 pt-16 md:pt-20">
       <div className="container flex flex-col gap-10 md:gap-0">
         <div className="flex flex-col items-center justify-center gap-10 md:flex-row md:gap-2 md:border-t md:pt-4 lg:gap-10">
+          <div className="relative flex">
+            <Image src="/assets/images/logo.svg" alt="logo" width={175} height={50} />
+          </div>
           <nav>
             <ul className="flex flex-col gap-4 md:flex-row md:gap-[60px]">
               <div className="flex space-x-4">

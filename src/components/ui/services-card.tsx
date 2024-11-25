@@ -21,11 +21,11 @@ const ServiceCard: FC<ServiceCardProps> = ({
   features,
 }) => {
   return (
-    <div className="flex size-full  flex-col gap-6 rounded-xl border  border-components-stroke-default bg-text-tugrenya-black px-6 py-8 lg:gap-10 lg:p-8 ">
+    <div className="relative flex size-full max-h-full flex-col gap-6 rounded-xl border  border-components-stroke-default bg-text-tugrenya-black px-6 py-8 lg:gap-6 lg:p-6 ">
       <div className="flex items-center justify-between gap-10 md:min-h-[70px]">
         <div className="flex flex-col gap-2">
           <h3>{title}</h3>
-          {description && <p className="paragraph-m-semibold">{description}</p>}
+          {description && <p className="paragraph-m-semibold text-sm">{description}</p>}
         </div>
       </div>
       <Divider className="m-0" />

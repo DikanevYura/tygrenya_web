@@ -42,7 +42,7 @@
   }
 
   .subheading {
-    @apply md:text-xl md:font-semibold leading-120 text-lg font-normal;
+    @apply md:text-base md:font-semibold leading-120 text-base font-normal;
   }
 
   .paragraph-l-semibold {
@@ -116,6 +116,27 @@
   input.input:-webkit-autofill ~ label {
     transition: none;
     top: 20px;
+  }
+}
+
+@layer utilities {
+  @keyframes slideInFromLeft {
+    from {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  .logo-animation {
+    @apply animate-[slideInFromLeft_0.8s_ease-out];
+  }
+
+  .no-animation {
+    animation: none;
   }
 }
 

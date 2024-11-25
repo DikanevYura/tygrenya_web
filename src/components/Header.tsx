@@ -18,8 +18,10 @@ import { IconButton } from './ui';
 
 const menuItems = [
   { name: 'Послуги', id: 'services' },
-  { name: 'Відгуки', id: 'reviews' },
-  { name: 'Як це працює?', id: 'how-it-works' },
+  // { name: 'Відгуки', id: 'reviews' },
+  { name: 'Часті запитання', id: 'how-it-works' },
+  { name: 'Основні принципи', id: 'principi' },
+  { name: 'Структура заняття', id: 'structure' },
   { name: 'Контакти', id: 'contacts' },
 ];
 
@@ -104,8 +106,14 @@ const Header = () => {
           style={{ marginRight: isOpenMenu ? `${scrollbarWidth}px` : 0 }}
         >
           <div className={cn('absolute inset-0 border-b backdrop-blur-2xl opacity-0 transition-opacity duration-200', isScrolled && !isOpenMenu && 'opacity-100 xl:opacity-0')} />
-          <span className="relative mr-6 shrink-0 cursor-pointer" onClick={() => scrollToSection('home')}>
-            <Image src="/assets/images/Colorful Toy Rental Business Card.svg" alt="logo" width={61.5} height={37.5} />
+          <span
+            className={cn(
+              'relative mr-6 shrink-0 cursor-pointer logo-animation',
+              isScrolled && 'no-animation',
+            )}
+            onClick={() => scrollToSection('home')}
+          >
+            <Image src="/assets/images/logo.svg" alt="logo" width={165} height={50} />
           </span>
 
           <div className="relative flex items-center gap-5 xl:hidden">

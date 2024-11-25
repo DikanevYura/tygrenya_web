@@ -34,7 +34,7 @@ export const Accordion: React.FC<CollapseProps> = ({
           aria-expanded={isExpanded ? 'true' : 'false'}
           aria-controls={`accordion-collapse-body-${id}`}
         >
-          <span className="max-w-[calc(100%_-_10.7%)]">{title}</span>
+          <span className="max-w-[calc(100%_-_10.7%)] text-xl">{title}</span>
           <Icon
             name="arrow_drop_down"
             className={cn(
@@ -49,8 +49,8 @@ export const Accordion: React.FC<CollapseProps> = ({
         className={cn(isExpanded ? 'block' : 'hidden')}
         aria-labelledby={`accordion-collapse-heading-${id}`}
       >
-        <div className="w-full max-w-[calc(100%_-_10.7%)] pt-3 text-sm font-normal leading-5 text-text-tugrenya-black opacity-75">
-          <p>{content}</p>
+        <div className="w-full max-w-[calc(100%_-_10.7%)] pt-3 text-base font-normal leading-5 text-text-tugrenya-black opacity-75">
+          <p className="text-[18px]">{content}</p>
         </div>
       </div>
     </div>
