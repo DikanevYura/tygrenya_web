@@ -19,7 +19,6 @@ export const BannerMain = () => {
               <Icon name="phone-call-svgrepo-com" size={24} />
             </div>
             <Link href="tel: +380505137203" className="text-text-tugrenya-black hover:text-text-tugrenya-black/50">+380505137203</Link>
-            ;
             <Link href="tel: +3809966729102" className="text-text-tugrenya-black hover:text-text-tugrenya-black/50">+3809966729102</Link>
           </div>
           <div className="flex w-full gap-3 text-text-tugrenya-black">

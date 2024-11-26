@@ -7,6 +7,7 @@ import type { ReactNode } from 'react';
 
 import { Footer, Header, Sprite, Toaster } from '@/components';
 import { MapProvider } from '@/components/provider/map-provider';
+import ScrollToTopButton from '@/components/ui/scroll-button';
 import { cn } from '@/libs/cn';
 
 export async function generateMetadata() {
@@ -53,6 +54,7 @@ export default function RootLayout(props: {
         <MapProvider>
           <Header />
           {props.children}
+          <ScrollToTopButton />
           <Footer />
           <div id="modal-root" />
         </MapProvider>

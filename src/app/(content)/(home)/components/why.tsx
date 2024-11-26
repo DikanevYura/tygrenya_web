@@ -65,19 +65,7 @@ export const Why: FC<{ className?: string }> = ({ className }) => {
             return (
               <SwiperSlide key={`Why_${slide.id}`} className="max-w-48">
                 <div className="flex flex-col items-center">
-                  {/* <div className="relative mb-6 aspect-square w-32 overflow-hidden rounded-full">
-                    <Image
-                      src={slide.image}
-                      alt="slide"
-                      fill
-                      className="image w-full object-cover"
-                      quality={80}
-                    />
-                  </div> */}
-                  {/* <div className="mb-1 flex h-10 items-center justify-center">
-                    <h5 className="text-center font-semibold">{slide.title}</h5>
-                  </div> */}
-                  <span className="text-center text-sm font-normal leading-5 tracking-[-0.1px]">
+                  <span className="text-center text-base font-normal leading-5 tracking-[-0.1px]">
                     {slide.description}
                   </span>
                 </div>

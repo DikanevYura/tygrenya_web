@@ -84,10 +84,10 @@ export const Lessons: FC<{
                     quality={100}
                     loading="lazy"
                   />
-                  <div className="mt-2 flex items-center justify-center text-text-tugrenya-black">
+                  <div className="mb-4 mt-2 flex items-center justify-center text-text-tugrenya-black">
                     <h5 className="text-center font-semibold">{slide.title}</h5>
                   </div>
-                  <span className="text-center text-sm font-normal leading-5 text-text-tugrenya-black">
+                  <span className="text-center text-base font-normal leading-5 text-text-tugrenya-black">
                     {slide.description}
                   </span>
                 </div>
@@ -99,18 +99,18 @@ export const Lessons: FC<{
           ref={prevRef}
           type="button"
           aria-label="Previous Slide"
-          className="absolute left-6 top-36 z-10 flex size-11  -translate-y-1/2 items-center  justify-center rounded-full bg-[#ffffff]/[0.64] transition-all hover:bg-[#ffffff]/80 disabled:invisible"
+          className="absolute left-6 top-36 z-10 flex size-11  -translate-y-1/2 items-center  justify-center rounded-full bg-text-tugrenya-white/[0.64] transition-all hover:bg-text-tugrenya-white/80 disabled:invisible"
         >
-          <Icon name="arrow_forward" className="size-6" />
+          <Icon name="arrow_forward" className="size-6 -rotate-180" />
         </button>
 
         <button
           ref={nextRef}
           type="button"
           aria-label="Next Slide"
-          className="absolute right-6 top-36 z-10 flex size-11 -translate-y-1/2 rotate-180 items-center justify-center rounded-full bg-[#ffffff]/[0.64] transition-all hover:bg-[#ffffff]/80 disabled:invisible"
+          className="absolute right-6 top-36 z-10 flex size-11 -translate-y-1/2 rotate-180 items-center justify-center rounded-full bg-text-tugrenya-white/[0.64] transition-all hover:bg-text-tugrenya-white/80 disabled:invisible"
         >
-          <Icon name="arrow_forward" className="size-6" />
+          <Icon name="arrow_forward" className="size-6 rotate-180" />
         </button>
       </div>
     </section>

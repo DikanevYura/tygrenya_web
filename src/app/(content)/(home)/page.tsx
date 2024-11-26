@@ -4,6 +4,7 @@ import { BannerMain } from './components/bannerMain';
 import { FreqQuestion } from './components/freqQuestion';
 import { MapComponent } from './components/map';
 import { Lessons } from './components/our-features';
+import { Reviews } from './components/review';
 import { Services } from './components/services';
 import BannerGrid from './components/small-banner';
 import { Why } from './components/why';
@@ -155,9 +156,9 @@ export default async function HomePage() {
       <section id="services">
         <Lessons slides={LESSONS_SLIDES} className="js-section text-text-800 sm:pb-20" />
       </section>
-      {/* <section id="reviews">
+      <section id="reviews">
         <Reviews />
-      </section> */}
+      </section>
       <section id="how-it-works" className="container flex flex-col gap-10">
         <FreqQuestion />
       </section>

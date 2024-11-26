@@ -18,7 +18,7 @@ import { IconButton } from './ui';
 
 const menuItems = [
   { name: 'Послуги', id: 'services' },
-  // { name: 'Відгуки', id: 'reviews' },
+  { name: 'Відгуки', id: 'reviews' },
   { name: 'Часті запитання', id: 'how-it-works' },
   { name: 'Основні принципи', id: 'principi' },
   { name: 'Структура заняття', id: 'structure' },

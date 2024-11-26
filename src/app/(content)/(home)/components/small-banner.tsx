@@ -1,7 +1,6 @@
 'use client';
 
 import Image from 'next/image';
-import Link from 'next/link';
 
 import { cn } from '@/libs/cn';
 
@@ -23,9 +22,7 @@ const BannerGrid: React.FC<BannerProps> = ({ data }) => {
               index === 2 && 'md:w-auto',
             )}
           >
-            <Link
-              href={item.path}
-              target="_blank"
+            <div
               rel="nofollow noindex"
               className={cn(
                 'relative flex h-full justify-center overflow-hidden w-full',
@@ -36,11 +33,11 @@ const BannerGrid: React.FC<BannerProps> = ({ data }) => {
             >
               <div className="absolute inset-x-0 bottom-0 z-10 flex flex-col items-start justify-center gap-4 px-6 pb-6">
                 <div className="flex flex-col">
+                  <span className="text-brand-light mb-5 text-[1.7rem] leading-7 lg:leading-[27px]">
+                    {item.desc}
+                  </span>
                   <span className="text-brand mb-2 text-[1.2rem] font-normal">
                     {item.value}
-                  </span>
-                  <span className="text-brand-light text-[1.7rem] leading-7 lg:leading-[27px]">
-                    {item.desc}
                   </span>
                 </div>
                 <span className="text-md text-brand-light">
@@ -71,9 +68,8 @@ const BannerGrid: React.FC<BannerProps> = ({ data }) => {
                 />
                 <div className="absolute inset-0 bg-black/40" />
               </div>
-              {/* Group hover effect */}
               <div className="z-5 group-hover:animate-shine absolute top-0 block h-full w-1/2 -skew-x-12 bg-gradient-to-r from-transparent to-white opacity-30 ltr:-left-full rtl:-right-full" />
-            </Link>
+            </div>
           </div>
         ))}
       </div>
