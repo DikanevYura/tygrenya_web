@@ -33,7 +33,7 @@ const ScrollToTopButton = () => {
         <button
           type="button"
           onClick={scrollToTop}
-          className="hover:bg-brand-dark fixed bottom-24 right-4 z-50 hidden rounded-md bg-text-tugrenya-white p-3 text-white shadow-lg transition-all md:bottom-8 md:right-8 md:flex"
+          className="hover:bg-brand-dark fixed bottom-8 right-4 z-50  flex rounded-md bg-text-tugrenya-white p-3 text-white shadow-lg transition-all md:bottom-8 md:right-8"
           aria-label="Scroll to top"
         >
           <Icon name="arrow_forward" className="size-[24px] -rotate-90 text-text-tugrenya-black" />

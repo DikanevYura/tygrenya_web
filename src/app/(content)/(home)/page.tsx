@@ -1,3 +1,5 @@
+import type { Metadata } from 'next';
+
 import type { ServiceCardProps } from '@/components/ui/services-card';
 
 import { BannerMain } from './components/bannerMain';
@@ -145,6 +147,24 @@ const servicesMock: ServiceCardProps[] = [
     ],
   },
 ];
+
+export const metadata: Metadata = {
+  title: 'Тигреня',
+  description: 'Тигреня - АВА Терапія',
+  openGraph: {
+    title: 'Тигреня',
+    description: 'Тигреня - АВА Терапія',
+    url: '/',
+    siteName: 'tugrenya',
+    images: [
+      {
+        url: '/assets/images/aba.png', // Add a relevant image URL for the Open Graph preview
+        width: 800,
+        height: 600,
+      },
+    ],
+  },
+};
 
 export default async function HomePage() {
   return (

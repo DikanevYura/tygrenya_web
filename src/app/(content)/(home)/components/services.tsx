@@ -21,12 +21,12 @@ const Services: FC<ServicesProps> = ({ title, description, services }) => {
         <h2>{title}</h2>
         <p className="leading-tight">{description}</p>
       </div>
-      <div className="mt-14 max-h-[412px] w-full items-start md:mt-0">
+      <div className="mt-14 w-full items-start md:mt-0 md:max-h-[412px]">
         <div className="mx-auto flex size-full flex-col items-start gap-8 md:grid-cols-2 md:flex-row ">
           {services.map((service, idx) => (
             <div
               key={`service-${idx}`}
-              className={idx === 1 ? 'h-full max-w-full md:h-[412px]' : 'h-full max-w-full md:h-[412px] md:max-w-[350px]'}
+              className={idx === 1 ? 'size-full md:h-[412px] md:max-w-full' : 'h-full max-w-full md:h-[412px] md:max-w-[350px]'}
             >
               <ServiceCard {...service} />
             </div>
