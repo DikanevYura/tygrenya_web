@@ -15,10 +15,10 @@ const Footer = () => {
           <div className="relative flex">
             <Image src="/assets/images/logo-white.svg" alt="logo" width={175} height={50} />
           </div>
-          <div className="flex flex-col items-center justify-center gap-4 md:flex-row">
+          {/* <div className="flex flex-col items-center justify-center gap-4 md:flex-row">
             <Link href="/privacy" className="text-text-tugrenya-white hover:text-text-tugrenya-white/50">Політика конфіденційності</Link>
             <Link href="/" className="text-text-tugrenya-white hover:text-text-tugrenya-white/50">Публічна оферта</Link>
-          </div>
+          </div> */}
           <nav>
             <ul className="flex flex-col gap-4 md:flex-row md:gap-[60px]">
               <div className="flex space-x-4">
