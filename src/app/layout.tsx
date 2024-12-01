@@ -6,7 +6,6 @@ import { Open_Sans } from 'next/font/google';
 import type { ReactNode } from 'react';
 
 import { Footer, Header, Sprite, Toaster } from '@/components';
-import { MapProvider } from '@/components/provider/map-provider';
 import ScrollToTopButton from '@/components/ui/scroll-button';
 import { cn } from '@/libs/cn';
 
@@ -51,13 +50,11 @@ export default function RootLayout(props: {
       <body className="overflow-x-hidden">
         <Sprite />
         <Toaster />
-        <MapProvider>
-          <Header />
-          {props.children}
-          <ScrollToTopButton />
-          <Footer />
-          <div id="modal-root" />
-        </MapProvider>
+        <Header />
+        {props.children}
+        <ScrollToTopButton />
+        <Footer />
+        <div id="modal-root" />
       </body>
     </html>
   );
