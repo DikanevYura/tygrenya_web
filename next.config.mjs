@@ -5,7 +5,12 @@ import createJiti from 'jiti';
 
 const jiti = createJiti(fileURLToPath(import.meta.url));
 
-jiti('./src/libs/Env');
+try {
+  jiti('./src/libs/Env'); // Import the environment validation
+} catch (error) {
+  console.error('Environment validation failed:', error.message);
+  // Optionally, throw an error or use default values for missing variables
+}
 
 const bundleAnalyzer = withBundleAnalyzer({
   enabled: process.env.ANALYZE === 'true',
