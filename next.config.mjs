@@ -26,4 +26,6 @@ export default bundleAnalyzer({
   experimental: {
     serverComponentsExternalPackages: [],
   },
+  // Add the output directory for static export
+  output: 'export',
 });
