@@ -40,7 +40,7 @@ const Footer = () => {
           <span className="text-text-muted">
             {currentYear}
             {' '}
-            Всі права захищені. Тигреня
+            Всі права захищені. ТИГРЕНЯ
           </span>
         </div>
       </div>
