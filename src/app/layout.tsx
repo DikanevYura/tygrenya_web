@@ -3,6 +3,7 @@ import 'swiper/css';
 
 import type { Viewport } from 'next';
 import { Open_Sans } from 'next/font/google';
+import Head from 'next/head';
 import type { ReactNode } from 'react';
 
 import { Footer, Header, Sprite, Toaster } from '@/components';
@@ -48,6 +49,9 @@ export default function RootLayout(props: {
       className={cn('max-w-screen !bg-[#FFFBF7]', openSans.variable)}
     >
       <body className="overflow-x-hidden">
+        <Head>
+          <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+        </Head>
         <Sprite />
         <Toaster />
         <Header />
