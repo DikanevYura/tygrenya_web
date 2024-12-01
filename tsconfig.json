@@ -13,8 +13,7 @@
     "moduleResolution": "bundler",
     "paths": {
       "@/*": ["./src/*"],
-      "@/public/*": ["./public/*"],
-      "@/styles/*": ["styles/*"]
+      "@/public/*": ["./public/*"]
     },
     "resolveJsonModule": true,
     // Load types
