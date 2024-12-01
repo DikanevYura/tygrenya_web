@@ -30,6 +30,8 @@ jobs:
         with:
           node-version: '20'
           cache: npm
+      - name: Set environment variables
+        run: echo "NEXT_PUBLIC_BASE_URL="https://dikanevyura.github.io/tygrenya_web/" >> $GITHUB_ENV
       - name: Restore cache
         uses: actions/cache@v4
         with:
