@@ -3,10 +3,6 @@ name: Checkly
 on: [deployment_status]
 
 env:
-  CHECKLY_API_KEY: ${{ secrets.CHECKLY_API_KEY }}
-  CHECKLY_ACCOUNT_ID: ${{ secrets.CHECKLY_ACCOUNT_ID }}
-  CHECKLY_TEST_ENVIRONMENT: ${{ github.event.deployment_status.environment }}
-
 jobs:
   test-e2e:
     strategy:
